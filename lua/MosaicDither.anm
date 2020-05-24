@@ -1,0 +1,16 @@
+--track0:transparency,0,255,0,0.01
+--track1:pixel size,1,100,1,1
+--track2:seed,0,1000,0,1
+data, w, h = obj.getpixeldata()
+
+MosaicFade = require "MosaicFade"
+
+pixel_size = obj.track1
+transparency = obj.track0
+offset_x = 0
+offset_y = 0
+random_seed = obj.track2
+
+MosaicFade.apply(data, w, h, pixel_size, transparency, offset_x, offset_y, random_seed)
+
+obj.putpixeldata(data)

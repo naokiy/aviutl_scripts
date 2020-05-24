@@ -1,0 +1,1 @@
+#include "aviutl/map.h"

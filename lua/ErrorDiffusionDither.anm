@@ -1,0 +1,8 @@
+--track0:level,1,9,1,1
+
+data, w, h = obj.getpixeldata()
+
+ErrorDiffusionDither = require "ErrorDiffusionDither"
+ErrorDiffusionDither.apply(data, w, h, obj.track0)
+
+obj.putpixeldata(data)
